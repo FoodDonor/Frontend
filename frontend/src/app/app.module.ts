@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+// import { RouterModule } from '@angular/router';
+// import { routes } from './app-routing.module';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -8,7 +10,11 @@ import { VolunteerRegComponent } from './volunteer-reg/volunteer-reg.component';
 import { OwnerRegComponent } from './owner-reg/owner-reg.component';
 import { DonorSearchComponent } from './donor-search/donor-search.component';
 import { VolunteerSearchComponent } from './volunteer-search/volunteer-search.component';
-import { DonorLocComponent } from './donor-loc/donor-loc.component';
+import { OwnerLocComponent } from './owner-loc/owner-loc.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+
+import { MatToolbarModule } from '@angular/material';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -18,11 +24,14 @@ import { DonorLocComponent } from './donor-loc/donor-loc.component';
     OwnerRegComponent,
     DonorSearchComponent,
     VolunteerSearchComponent,
-    DonorLocComponent
+    OwnerLocComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatToolbarModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
