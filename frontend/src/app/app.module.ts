@@ -11,6 +11,10 @@ import { VolunteerSearchComponent } from './volunteer-search/volunteer-search.co
 import { OwnerLocComponent } from './owner-loc/owner-loc.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 
+import {MatTableModule} from '@angular/material/table';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import {MatSortModule} from '@angular/material/sort';
 import { MatToolbarModule } from '@angular/material';
 import { MatButtonModule } from '@angular/material/button';
 import { MatGridListModule } from '@angular/material/grid-list';
@@ -44,7 +48,11 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     MatInputModule,
     MatCardModule,
     BrowserAnimationsModule,
-    NgbModule
+    NgbModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule,
+    MatProgressSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

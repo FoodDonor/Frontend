@@ -21,7 +21,7 @@ export class OwnerRegComponent implements OnInit {
       password: new FormControl('', Validators.required),
       phone: new FormControl('', Validators.required),
       address: new FormControl('', Validators.required),
-      pincode: new FormControl('', Validators.required)
+      zipcode: new FormControl('', Validators.required)
     });
   }
 
