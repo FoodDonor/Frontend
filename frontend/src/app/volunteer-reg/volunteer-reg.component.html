@@ -1,1 +1,56 @@
-<p>volunteer-reg works!</p>
+<mat-card>
+    <mat-card-title>Volunteer Registration</mat-card-title>
+    <br>
+    <mat-card-content>
+        <form [formGroup]="form" (ngSubmit)="submit()">
+
+            <p>
+                <mat-form-field>
+                    <input type="text" matInput placeholder="Full Name" formControlName="full_name">
+                </mat-form-field>
+            
+                &nbsp;
+
+                <mat-form-field>
+                    <input type="email" matInput placeholder="Email" formControlName="email">
+                </mat-form-field>
+            </p>
+
+            <p>
+                <mat-form-field>
+                    <input type="date" matInput placeholder="DOB" formControlName="dob">
+                </mat-form-field>
+                
+                &nbsp;
+
+                <mat-form-field>
+                    <input type="number" matInput placeholder="Phone" formControlName="phone">
+                </mat-form-field>
+            </p>
+
+            <p>
+                <mat-form-field>
+                    <textarea matInput placeholder="Address" formControlName="address"></textarea>
+                </mat-form-field>
+                
+                &nbsp;
+                
+                <mat-form-field>
+                    <input type="number" matInput placeholder="Pincode" formControlName="pincode">
+                </mat-form-field>
+            </p>
+
+            <p>
+                <mat-form-field>
+                    <input type="password" matInput placeholder="Password" formControlName="password">
+                </mat-form-field>
+            </p>
+
+            <div class="right-align-content">
+                <button type="submit" mat-button class="button">Submit</button>
+            </div>
+
+        </form>
+
+    </mat-card-content>
+</mat-card>
