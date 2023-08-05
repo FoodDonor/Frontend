@@ -23,5 +23,5 @@ export class Location {
   "pf": number // people fed
   "kg": number // kgs food given
   "m": number // or 1 or 2 // manpower ENUM
-
+  "r": number // extra man power request
 }
