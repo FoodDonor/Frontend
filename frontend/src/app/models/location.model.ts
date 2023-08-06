@@ -10,7 +10,6 @@ import { CommonModule } from '@angular/common';
   ]
 })
 export class Location {
-
   "d": { // distributor
     "n": string, // name
     "c": { // contact

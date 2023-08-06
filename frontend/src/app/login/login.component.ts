@@ -1,6 +1,7 @@
 
 import { Component, OnInit, NgModule } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { CommonService } from '../services/common.service';
 
 @Component({
   selector: 'app-login',
@@ -12,7 +13,7 @@ export class LoginComponent implements OnInit {
   form!: FormGroup;
   error: string = "Invalid Inputs";
 
-  constructor() { }
+  constructor(private service: CommonService) { }
 
   ngOnInit(): void {
     this.form = new FormGroup({
@@ -21,11 +22,25 @@ export class LoginComponent implements OnInit {
     });
   }
 
+  makeJson() {
+    let details = {
+      access: this.form.controls['username'].value,
+      password: this.form.controls['password'].value
+    };
+
+    return details;
+  }
+
   submit() {
     if (this.form.valid) {
-      console.log("Accepted input");
-      console.log(this.form.value);
-      console.log(this.form.controls['username']);
+      let details = this.makeJson();
+
+      this.service.login(details).then(
+        (data: any) => {
+          let status = data['status'];
+          let message = data['message'];
+        }
+      );
     }
   }
 

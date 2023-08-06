@@ -34,11 +34,15 @@ export class CommonService {
   }
 
   async login(details: any) {
-    return this.http.post(this.api_url + '/auth/login', {'encrypted': JSON.stringify(details)}).toPromise();
+    let enc = JSON.stringify(details);
+    enc = btoa(enc);
+    return this.http.post(this.api_url + '/auth/login', {'encrypted': enc}).toPromise();
   }
 
   async register(details: any) {
-    return this.http.post(this.api_url + '/auth/register', {'encrypted': JSON.stringify(details)}).toPromise();
+    let enc = JSON.stringify(details);
+    enc = btoa(enc);
+    return this.http.post(this.api_url + '/auth/register', {'encrypted': enc}).toPromise();
   }
 
   async distributorUpdate(loc_id: string, details: any) {

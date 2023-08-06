@@ -31,36 +31,6 @@ export class DonorSearchComponent implements OnInit, AfterViewInit {
   @ViewChild(MatSort) sort: MatSort = new MatSort();
 
   constructor(private service: CommonService) {
-
-    // const locations: Location[] = [{
-    //   "d": { // distributor
-    //     "n": "Name 1", // name
-    //     "c": { // contact
-    //       "e": "n1@e.com",  // can be null // email
-    //       "p": "9999988888" // phone
-    //     }
-    //   },
-    //   "l": "l1", // location
-    //   "t": "t1", // last known data timestamp
-    //   "pf": 100, // people fed
-    //   "kg": 50, // kgs food given
-    //   "m": 2 // or 1 or 2 // manpower ENUM
-    // }, {
-    //   "d": { // distributor
-    //     "n": "Name 2", // name
-    //     "c": { // contact
-    //       "e": "n2@e.com",  // can be null // email
-    //       "p": "9999977777" // phone
-    //     }
-    //   },
-    //   "l": "l2", // location
-    //   "t": "t2", // last known data timestamp
-    //   "pf": 200, // people fed
-    //   "kg": 100, // kgs food given
-    //   "m": 4 // or 1 or 2 // manpower ENUM
-    // }];
-
-    // this.dataSource = new MatTableDataSource(locations);
     this.dataSource.sort = this.sort;
   }
 

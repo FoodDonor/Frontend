@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { CommonService } from '../services/common.service';
 
 @Component({
   selector: 'app-volunteer-reg',
@@ -11,7 +12,7 @@ export class VolunteerRegComponent implements OnInit {
   form!: FormGroup;
   error: string = "Invalid Inputs";
 
-  constructor() { }
+  constructor(private service: CommonService) { }
 
   ngOnInit(): void {
     this.form = new FormGroup({
@@ -21,14 +22,39 @@ export class VolunteerRegComponent implements OnInit {
       password: new FormControl('', Validators.required),
       phone: new FormControl('', Validators.required),
       address: new FormControl('', Validators.required),
-      zipcode: new FormControl('', Validators.required)
+      zipcode: new FormControl('', Validators.required),
+      who: new FormControl('', Validators.required)
     });
+  }
+
+  makeJson(){
+    let details = {
+      full_name: this.form.controls['full_name'].value,
+      email: this.form.controls['email'].value,
+      dob: this.form.controls['dob'].value,
+      password: this.form.controls['password'].value,
+      phone: this.form.controls['phone'].value,
+      address: this.form.controls['address'].value,
+      zipcode: this.form.controls['zipcode'].value,
+      who: this.form.controls['who'].value
+    }
+
+    return details;
   }
 
   submit() {
     if (this.form.valid) {
-      console.log("Accepted input");
-      console.log(this.form.value);
+      let details = this.makeJson();
+
+      this.service.register(details).then(
+        (data: any) => {
+          let status = data['stauts'];
+          let message = data['message'];
+        },
+        (error) => {
+          console.log(error);
+        }
+      );
     }
   }
 

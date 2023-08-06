@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NgFor } from '@angular/common';
-import { MatGridListModule } from '@angular/material/grid-list';
+import { CommonService } from '../services/common.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -10,20 +9,25 @@ import { MatGridListModule } from '@angular/material/grid-list';
 
 export class DashboardComponent implements OnInit {
 
-  tiles: {
-    cols: number;
-    rows: number;
-    text: string;
-  }[] = []
+  total_num_fed: number = 0;
+  total_kgs_fed: number = 0;
+  total_locations: number = 0;
+  total_volunteers: number = 0;
 
-  constructor() { }
+  constructor(private service: CommonService) { }
 
   ngOnInit(): void {
-    this.tiles = [
-      {text: 'Stat 1', cols: 2, rows: 1},
-      {text: 'Stat 2', cols: 2, rows: 1},
-      {text: 'Stat 3', cols: 2, rows: 1}
-    ];
+    this.service.getStats().then(
+      (data: any) => {
+        this.total_num_fed = data['total_num_fed'];
+        this.total_kgs_fed = data['total_kgs_fed'];
+        this.total_volunteers = data['total_volunteers'];
+        this.total_locations = data['total_location'];
+      },
+      (error) => {
+        console.log(error);
+      }
+    )
   }
 
 }

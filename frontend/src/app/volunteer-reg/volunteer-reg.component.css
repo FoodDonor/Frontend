@@ -1,33 +1,116 @@
-mat-card-title,
-mat-card-content {
-    display: inline-flex;
-    justify-content: center;
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Merriweather:ital,wght@1,300&family=Ubuntu:ital,wght@1,300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-:host {
-    display: flex;
-    justify-content: center;
-    margin: 100px 0px;
+body{
+    font-family:'Lato', sans-serif;
+    
 }
 
-.mat-form-field {
-    width: 45%;
-    min-width: 300px;
+.outerbox{
+    height: 100vh;
+    width: 100vw;
+    background:  linear-gradient(to top left , #3ed8ff , #a8f5ff);
+
 }
 
-.error {
-    padding: 16px;
-    width: 300px;
+.innerbox{
+    width: 400px;
+    
+    margin: 0 auto;
+    position: relative;
+    top: 40%;
+    transform: translateY(-50%);
+    padding: 20px 40px;
+    background: linear-gradient(to top left, #ffffffff , #ffffff33);
+    backdrop-filter: blur(10px);
+    border-radius: 10px ;
+    box-shadow: 2px 2px 5px #215e87;
+    z-index: 2;
+}
+
+.signupheader h1{
+
+    font-size: 2.5rem;
+
+    color: #212121;
+}
+
+.signupheader p{
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.signupbody{
+    margin: 30px 0px;
+}
+
+.signupbody p{
+    margin: 10px 0px;
+}
+
+.signupbody p label {
+    display: block;
+    font-weight: bold;
+}
+
+.signupbody p input{
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #cccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    margin-top: 4px;
+}
+
+.signupbody p input[type = "submit"]{
+    background-color: #3498db;
+    border: none;
     color: white;
-    background-color: red;
+    cursor: pointer;
 }
 
-.right-align-content {
+.signupbody p input[type = "submit"]:hover{
+    background-color: #215e87 ;
+
+}
+
+.signupfooter p{
+    color: #555;
+    text-align: center;
+
+}
+
+.signupfooter p a{
+    color: #3498db;
+}
+
+.circle{
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+    background: linear-gradient(to top right , #ffffff33 , #ffffffff);
+
+    position: absolute;
+
+}
+
+.c1{
+    top: 100px;
+    left: 40px;
+}
+
+.c2{
+    right: 40px;
+    bottom: 200px;
+}
+
+
+.selectionclass{
     display: flex;
-    justify-content: flex-end;
-}
-
-.button {
-    color: whitesmoke;
-    background-color: cornflowerblue;
+    justify-content: space-evenly;
 }
