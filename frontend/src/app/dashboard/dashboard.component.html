@@ -1,13 +1,140 @@
-<h2>Landing page dashboard</h2>
+<div class="container">
+  <div class="smallboldtext bannertext">🚨Transforming Leftovers into Culinary Delights: Your Gateway to Sustainable and
+    Flavorful Cooking
+  </div>
+</div>
 
-<mat-grid-list [cols]="6" rowHeight="100px" [gutterSize]="'30px'">
-    <mat-grid-tile
-        *ngFor="let tile of tiles"
-        [colspan]="tile.cols"
-        [rowspan]="tile.rows"
-        [ngStyle]="{'font-size': '30px'}">
-      {{tile.text}}
-    </mat-grid-tile>
-</mat-grid-list>
+<nav>
+  <div class="container mainnav flex">
+    <a href="/dashboard" class="companylogo flex">
+      <img src="../Assets/asset 1.png" alt=""> Food Donor
 
-<p>Some text here</p>
+    </a>
+
+    <div class="navlinks ">
+      <ul class="flex ">
+
+        <li><a href="/login" class="hoverlinks primarybutton">Sign in</a></li>
+        <li><a href="/volunteerReg" class="hoverlinks primarybutton">Sign up</a></li>
+        <li><a href="#" class="hoverlinks contactbutton ">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<header>
+  <div class="container headersection flex">
+    <div class="headerleft">
+      <h1>Food Donor</h1>
+      <p>Connecting Volunteers and Restaurants to Feed the Less Fortunate </p>
+      <a href="/donorSearch" class="primarybutton getstartedbutton">Get Started</a>
+    </div>
+    <div class="headerright">
+      <img src="../Assets/asset 2.jpeg" alt="">
+    </div>
+
+  </div>
+</header>
+
+<section class="examplessection">
+  <div class="container">
+    <div class="exampleheading flex">
+      <h2>Donate Your Food Now!</h2>
+      <a class="secondarybutton" href="#">See more examples &#8594;</a>
+    </div>
+    <div class="examplesarea flex">
+      <a href="#" class="examplescard" style="background: url(../Assets/asset\ 36.jpg); background-size: cover;">
+      </a>
+
+      <a href="#" class="examplescard" style="background: url(../Assets/asset\ 37.jpg); background-size: cover; ">
+      </a>
+
+      <a href="#" class="examplescard" style="background: url(../Assets/asset\ 38.jpg); background-size: cover;">
+      </a>
+
+      <a href="#" class="examplescard" style="background: url(../Assets/asset\ 39.jpg); background-size: cover;">
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="ctasection">
+  <div class="container">
+    <div class="ctalist">
+
+    </div>
+
+  </div>
+  <div class="ctabackground flex">
+    <div class="container ctacontainer flex">
+      <div class="ctatext flex">
+
+        <h2 class="ctaheading">No participants?</h2>
+        <h2 class="ctaheading">No problem.</h2>
+
+        <p>Our integrated panel allows you to quickly and affordably recruit research participants that precisely match
+          your target audience.</p>
+        <h3 class="ctah3">Our panel includes:
+        </h3>
+
+        <div class="ctalist flex">
+
+          <ul>
+
+            <li>530k+ panel participants</li>
+            <li>35+ demographic options</li>
+            <li>Free demographic targeting</li>
+
+          </ul>
+          <ul>
+
+            <li>Coverage in 100+ countries</li>
+            <li>Average 2hr turn around time
+            </li>
+            <li>Response quality guarantee</li>
+
+          </ul>
+
+        </div>
+        <a class="primarybutton" href="#">
+          Learn more &#8594;
+        </a>
+
+      </div>
+
+      <div class="ctaimg flex">
+
+        <img src="../Assets/asset 40.png" alt="">
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<div class="lastcontainer flex">
+  <div class="container flex">
+
+    <h2>Start Donating Today!</h2>
+    <p class="lastcontainerp">One Person's Waste is another Person's Treasure</p>
+  </div>
+  <a class="primarybutton lastbutton flex" href="#">Get started</a>
+</div>
+
+
+<div class="subfooter">
+
+  <div class="container subfootercontainer flex">
+    <a href="#" class="hoverlink">Privacy policy</a>
+    <a href="#" class="hoverlink">Terms & Condition</a>
+    <a href="#" class="hoverlink">Security Information</a>
+    <a href="#" class="hoverlink"><i class="fa-brands fa-facebook"></i></a>
+    <a href="#" class="hoverlink"><i class="fa-brands fa-twitter"></i></a>
+    <a href="#" class="hoverlink"><i class="fa-brands fa-linkedin"></i></a>
+    <a href="#" class="hoverlink"><i class="fa-brands fa-youtube"></i></a>
+  </div>
+
+</div>
+
+<script src="https://kit.fontawesome.com/dbe61b8943.js" crossorigin="anonymous"></script>

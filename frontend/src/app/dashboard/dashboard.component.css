@@ -1,3 +1,418 @@
-mat-grid-tile {
-    background: lightblue;
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Merriweather:ital,wght@1,300&family=Poppins:wght@400;700&family=Roboto:wght@400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primarytextcolor: #183b56;
+    --secondarytextcolor: #577592;
+    --accentcolor: #b929a4;
+    --accentcolordark: #1d69a3;
+    --paddinginlinesection: 20px;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--primarytextcolor);
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.1rem;
+}
+
+p {
+    font-family: 'roboto', sans-serif;
+    font-size: 1.25rem;
+    color: var(--secondarytextcolor);
+    line-height: 1.8rem;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+.smallboldtext {
+    font-size: 14px;
+    font-weight: 700
+}
+
+.container {
+    max-width: 1180px;
+    margin-inline: auto;
+    padding: var(--paddinginlinesection);
+}
+
+.bannertext {
+    text-align: center;
+    padding: px 30px;
+    color: white;
+    font-weight: 20px;
+
+}
+
+.topbanner {
+    background-image: url('../Assets/asset 32.png');
+    background-color: var(--accentcolor);
+    background-size: 300px;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+ul {
+    list-style: none;
+
+}
+
+.companylogo img {
+    width: 50px;
+
+
+}
+
+.companylogo {
+    gap: 5px;
+    font-family: roboto;
+    font-size: 20px;
+}
+
+.mainnav {
+    justify-content: space-between;
+    /* gap: 400px; */
+}
+
+.navlinks ul {
+    justify-content: end;
+    gap: 40px;
+}
+
+.navlinks {
+    flex-basis: 730px;
+}
+
+.hoverlinks {
+    color: var(--primarytextcolor);
+
+}
+
+.hoverlinks:hover {
+    color: var(--accentcolor);
+}
+
+.primarybutton {
+    background-color: var(--accentcolor);
+    border-radius: 8px;
+    padding: 8px 17px;
+    color: white;
+    box-shadow: 0 0 2px var(--secondarytextcolor);
+    transition: 0.2s ease-out;
+}
+
+.primarybutton:hover {
+    background-color: #183b56;
+    color: white;
+}
+
+.secondarybutton {
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 8px;
+    padding: 8px 17px;
+    color: black;
+    box-shadow: 0 0 2px var(--secondarytextcolor);
+    transition: 0.2s ease-out;
+}
+
+.secondarybutton:hover {
+    background-color: #183b56;
+    color: white;
+}
+
+header {
+    padding: 50px var(--paddinginlinesection 0);
+}
+
+.headersection {
+    justify-content: center;
+    gap: 100px;
+}
+
+.headerright img {
+    width: 600px;
+}
+
+.headerleft {
+    max-width: 40vw;
+
+}
+
+.headerleft h1 {
+    margin-top: 20px;
+    white-space: nowrap;
+
+
+}
+
+.getstartedbutton {
+    margin-top: 20px;
+
+
+}
+
+.companiesheader {
+    text-align: center;
+    color: var(--primarytextcolor);
+    margin-block: 20px;
+    font-weight: 200;
+    font-size: 18px;
+}
+
+.logo {
+
+    height: 46px;
+
+}
+
+.logos {
+    justify-content: space-between;
+    /* flex-wrap: wrap; */
+}
+
+.featuresheader {
+    text-align: center;
+    margin-block: 140px;
+
+}
+
+.featuresheader h2 {
+    font-weight: 200;
+    margin-bottom: 20px;
+}
+
+.seeallfeatures {
+    border-radius: 5px;
+
+}
+
+.featuresarea {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 50px;
+    margin-top: 60px;
+}
+
+.featurescard {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 30%;
+    text-align: center;
+}
+
+.featurescard img {
+    width: 60px;
+}
+
+.featuressection {
+    background-image: url('../Assets/asset 34.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.featureimg img {
+    width: 500px;
+}
+
+.bigfeaturecontainer {
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.featuretext {
+    flex-direction: column;
+    align-items: flex-start;
+
+
+}
+
+.featuretext h4 {
+    font-weight: 200;
+
+    font-size: 20px;
+}
+
+.featuretext h3 {
+    font-size: 30px;
+}
+
+.exampleheading {
+    flex-direction: column;
+    gap: 20px;
+}
+
+.examplesarea {
+    justify-content: space-between;
+    margin-top: 20px;
+
+}
+
+.examplescard {
+    width: 23%;
+    min-height: 300px;
+
+
+    flex-direction: row;
+    background: white;
+    transition: 0.2s ease-out;
+
+}
+
+
+
+.examplescard img {
+    opacity: 0.9;
+}
+
+.examplescard:hover {
+    box-shadow: 0 0 10px #888;
+}
+
+.ctabackground {
+    height: 80vh;
+    background-color: var(--primarytextcolor);
+}
+
+
+.ctabackground ul li {
+    color: white;
+    margin: 20px;
+    list-style: disc;
+
+}
+
+.ctah3 {
+    color: white;
+}
+
+.ctaheading {
+    color: white;
+}
+
+.ctatext {
+    flex-direction: column;
+    align-items: flex-start;
+
+}
+
+.ctaimg img {
+
+    width: 600px;
+
+}
+
+.ctacontainer {
+    justify-content: space-between;
+    gap: 20px;
+
+}
+
+.ctaimg2 {
+    width: 200px;
+
+}
+
+
+.lastcontainer {
+    background-color: white;
+    height: 50vh;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.lastcontainer .container {
+    flex-direction: column;
+
+}
+
+.lastcontainerp {
+    margin-top: 30px;
+}
+
+
+
+.linkcolumn {
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 10px;
+
+
+
+}
+
+.footercontainer {
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+footer {
+    background-color: #ebf2fa;
+}
+
+.linkcolumn h3 {
+    font-weight: 650;
+}
+
+.linkcolumn a {
+    color: #577592;
+    transition: 0.2s ease-out;
+}
+
+.subfooter {
+    background-color: #b9cde4;
+    padding: var(--paddinginlinesection);
+
+}
+
+.subfootercontainer a {
+    color: #333333;
+
+}
+
+.subfootercontainer {
+    justify-content: center;
+    gap: 20px;
+
+}
+
+
+.contactbutton {
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 8px;
+    padding: 8px 17px;
+    color: black;
+    box-shadow: 0 0 2px var(--secondarytextcolor);
+    transition: 0.2s ease-out;
+}
+
+.contactbutton:hover {
+    background-color: #183b56;
+    color: white;
 }
