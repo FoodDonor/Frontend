@@ -1,179 +1,179 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Merriweather:ital,wght@1,300&family=Poppins:wght@400;700&family=Roboto:wght@400;500&display=swap');
 
-* {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-:root {
-    --primarytextcolor: #183b56;
-    --secondarytextcolor: #577592;
+:root{
+    --primarytextcolor:#183b56;
+    --secondarytextcolor:#577592; 
     --accentcolor: #b929a4;
-    --accentcolordark: #1d69a3;
-    --paddinginlinesection: 20px;
+    --accentcolordark:#1d69a3;
+    --paddinginlinesection:20px;
 }
 
-body {
-    font-family: 'Poppins', sans-serif;
+body{
+    font-family: 'Poppins' , sans-serif;
     color: var(--primarytextcolor);
 }
 
-h1 {
+h1{
     font-size: 3rem;
 }
 
-h2 {
+h2{
     font-size: 2rem;
 }
 
-h3 {
+h3{
     font-size: 1.1rem;
 }
 
-p {
+p{
     font-family: 'roboto', sans-serif;
     font-size: 1.25rem;
     color: var(--secondarytextcolor);
     line-height: 1.8rem;
 }
 
-a {
+a{
     text-decoration: none;
     display: inline-block;
 }
 
-.smallboldtext {
+.smallboldtext{
     font-size: 14px;
     font-weight: 700
 }
 
-.container {
+.container{
     max-width: 1180px;
     margin-inline: auto;
     padding: var(--paddinginlinesection);
 }
 
-.bannertext {
+.bannertext{
     text-align: center;
     padding: px 30px;
     color: white;
     font-weight: 20px;
-
+   
 }
 
-.topbanner {
-    background-image: url('../Assets/asset 32.png');
+.topbanner{
+    background-image: url(https://raw.githubusercontent.com/GNEC2023/assets/4551b5ad1d24cf8ea661fb246f936803ac91751f/Assets/asset32.png);
     background-color: var(--accentcolor);
     background-size: 300px;
 }
 
-.flex {
+.flex{
     display: flex;
     align-items: center;
 }
 
-ul {
+ul{
     list-style: none;
-
+    
 }
 
-.companylogo img {
+.companylogo img{
     width: 50px;
-
+    
 
 }
 
-.companylogo {
+.companylogo{
     gap: 5px;
     font-family: roboto;
     font-size: 20px;
 }
 
-.mainnav {
+.mainnav{
     justify-content: space-between;
     /* gap: 400px; */
 }
 
-.navlinks ul {
+.navlinks ul{
     justify-content: end;
     gap: 40px;
 }
 
-.navlinks {
+.navlinks{
     flex-basis: 730px;
 }
 
-.hoverlinks {
+.hoverlinks{
     color: var(--primarytextcolor);
 
 }
 
-.hoverlinks:hover {
+.hoverlinks:hover{
     color: var(--accentcolor);
 }
 
-.primarybutton {
+.primarybutton{
     background-color: var(--accentcolor);
     border-radius: 8px;
     padding: 8px 17px;
     color: white;
-    box-shadow: 0 0 2px var(--secondarytextcolor);
-    transition: 0.2s ease-out;
+  box-shadow: 0 0 2px var(--secondarytextcolor);
+  transition: 0.2s ease-out;
 }
 
-.primarybutton:hover {
-    background-color: #183b56;
+.primarybutton:hover{
+    background-color: #183b56   ;
     color: white;
 }
 
-.secondarybutton {
+.secondarybutton{
     background-color: white;
     border: 1px solid black;
     border-radius: 8px;
     padding: 8px 17px;
     color: black;
     box-shadow: 0 0 2px var(--secondarytextcolor);
-    transition: 0.2s ease-out;
+    transition: 0.2s ease-out    ;
 }
 
-.secondarybutton:hover {
+.secondarybutton:hover{
     background-color: #183b56;
     color: white;
 }
 
-header {
+header{
     padding: 50px var(--paddinginlinesection 0);
 }
 
-.headersection {
+.headersection{
     justify-content: center;
     gap: 100px;
 }
 
-.headerright img {
+.headerright img{
     width: 600px;
 }
 
-.headerleft {
+.headerleft{
     max-width: 40vw;
 
 }
 
-.headerleft h1 {
+.headerleft h1{
     margin-top: 20px;
     white-space: nowrap;
 
 
 }
 
-.getstartedbutton {
+.getstartedbutton{
     margin-top: 20px;
 
 
 }
 
-.companiesheader {
+.companiesheader{
     text-align: center;
     color: var(--primarytextcolor);
     margin-block: 20px;
@@ -181,34 +181,34 @@ header {
     font-size: 18px;
 }
 
-.logo {
+.logo{
 
     height: 46px;
-
+    
 }
 
-.logos {
+.logos{
     justify-content: space-between;
     /* flex-wrap: wrap; */
 }
 
-.featuresheader {
+.featuresheader{
     text-align: center;
     margin-block: 140px;
-
+    
 }
 
-.featuresheader h2 {
+.featuresheader h2{
     font-weight: 200;
     margin-bottom: 20px;
 }
 
-.seeallfeatures {
+.seeallfeatures{
     border-radius: 5px;
-
+    
 }
 
-.featuresarea {
+.featuresarea{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -216,7 +216,7 @@ header {
     margin-top: 60px;
 }
 
-.featurescard {
+.featurescard{
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -224,39 +224,38 @@ header {
     text-align: center;
 }
 
-.featurescard img {
+.featurescard img{
     width: 60px;
 }
 
-.featuressection {
-    background-image: url('../Assets/asset 34.svg');
+.featuressection{
+    background-image: url(https://raw.githubusercontent.com/GNEC2023/assets/4551b5ad1d24cf8ea661fb246f936803ac91751f/Assets/asset34.svg);
     background-repeat: no-repeat;
     background-position: center;
 }
 
-.featureimg img {
+.featureimg img{
     width: 500px;
 }
 
-.bigfeaturecontainer {
+.bigfeaturecontainer{
     justify-content: space-between;
     gap: 20px;
 }
 
-.featuretext {
+.featuretext{
     flex-direction: column;
     align-items: flex-start;
-
-
+    
+    
 }
-
-.featuretext h4 {
+.featuretext h4{
     font-weight: 200;
-
+    
     font-size: 20px;
 }
 
-.featuretext h3 {
+.featuretext h3{
     font-size: 30px;
 }
 
@@ -265,79 +264,77 @@ header {
     gap: 20px;
 }
 
-.examplesarea {
+.examplesarea{
     justify-content: space-between;
     margin-top: 20px;
-
+   
 }
-
-.examplescard {
+.examplescard{
     width: 23%;
     min-height: 300px;
-
+    
 
     flex-direction: row;
     background: white;
     transition: 0.2s ease-out;
-
+   
 }
 
 
 
-.examplescard img {
+.examplescard img{
     opacity: 0.9;
 }
 
-.examplescard:hover {
+.examplescard:hover{
     box-shadow: 0 0 10px #888;
 }
 
-.ctabackground {
+.ctabackground{
     height: 80vh;
     background-color: var(--primarytextcolor);
 }
 
 
-.ctabackground ul li {
+.ctabackground ul li{
     color: white;
     margin: 20px;
-    list-style: disc;
-
+    list-style:disc;
+    
 }
 
-.ctah3 {
+.ctah3{
     color: white;
 }
 
-.ctaheading {
+.ctaheading{
     color: white;
 }
 
-.ctatext {
+.ctatext{
     flex-direction: column;
     align-items: flex-start;
-
+    
 }
 
-.ctaimg img {
-
+.ctaimg img{
+    
     width: 600px;
-
+    
 }
-
-.ctacontainer {
+.ctacontainer{
     justify-content: space-between;
     gap: 20px;
-
+    
 }
 
-.ctaimg2 {
+.ctaimg2{
     width: 200px;
 
 }
 
 
-.lastcontainer {
+.lastcontainer{
     background-color: white;
     height: 50vh;
     flex-direction: column;
@@ -345,74 +342,74 @@ header {
     margin-top: 30px;
 }
 
-.lastcontainer .container {
+.lastcontainer .container{
     flex-direction: column;
-
+    
 }
 
-.lastcontainerp {
+.lastcontainerp{
     margin-top: 30px;
 }
 
 
 
-.linkcolumn {
+.linkcolumn{
     flex-direction: column;
     align-items: flex-start;
-
+    
     gap: 10px;
 
 
-
+    
 }
 
-.footercontainer {
+.footercontainer{
     align-items: flex-start;
     justify-content: space-between;
 }
 
-footer {
+footer{
     background-color: #ebf2fa;
 }
 
-.linkcolumn h3 {
+.linkcolumn h3{
     font-weight: 650;
 }
 
-.linkcolumn a {
+.linkcolumn a{
     color: #577592;
     transition: 0.2s ease-out;
 }
 
-.subfooter {
+.subfooter{
     background-color: #b9cde4;
     padding: var(--paddinginlinesection);
-
+    
 }
 
-.subfootercontainer a {
+.subfootercontainer a{
     color: #333333;
-
+    
 }
 
-.subfootercontainer {
+.subfootercontainer{
     justify-content: center;
     gap: 20px;
-
+    
 }
 
 
-.contactbutton {
+.contactbutton{
     background-color: white;
     border: 1px solid black;
     border-radius: 8px;
     padding: 8px 17px;
     color: black;
     box-shadow: 0 0 2px var(--secondarytextcolor);
-    transition: 0.2s ease-out;
+    transition: 0.2s ease-out    ;
 }
 
-.contactbutton:hover {
+.contactbutton:hover{
     background-color: #183b56;
     color: white;
 }

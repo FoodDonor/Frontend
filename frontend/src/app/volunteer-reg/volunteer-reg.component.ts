@@ -42,13 +42,14 @@ export class VolunteerRegComponent implements OnInit {
     return details;
   }
 
-  submit() {
+  onSubmit() {
     if (this.form.valid) {
       let details = this.makeJson();
+      console.log(details);
 
       this.service.register(details).then(
         (data: any) => {
-          let status = data['stauts'];
+          let status = data['status'];
           let message = data['message'];
         },
         (error) => {

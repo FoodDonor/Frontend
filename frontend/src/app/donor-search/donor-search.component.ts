@@ -44,7 +44,7 @@ export class DonorSearchComponent implements OnInit, AfterViewInit {
     this.dataSource.sort = this.sort;
   }
 
-  async submit() {
+  onSubmit() {
     if (this.form.valid) {
       // let response = "";
 
@@ -54,6 +54,7 @@ export class DonorSearchComponent implements OnInit, AfterViewInit {
           let message = data["message"];
           let locations: Location[] = data["locations"];
 
+          console.log(data);
           this.dataSource = new MatTableDataSource(locations);
           this.ngAfterViewInit();
         },

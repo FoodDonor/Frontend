@@ -1,24 +1,24 @@
-<div class="outerbox">
+<div>
     <div class="innerbox">
         <header class="signupheader">
             <h1>Signup</h1>
             <p>It just takes 30 seconds</p>
         </header>
-        <main class="signupbody">
-            <form action="#" [formGroup]="form" (ngSubmit)="submit()">
+        <div class="signupbody">
+            <form [formGroup]="form" (ngSubmit)="onSubmit()">
                 <p>
                     <label for="fullname">Full Name</label>
-                    <input type="text" id="fullname" placeholder="Vaibhav Gautam" formControlName="full_name" required>
+                    <input type="text" id="fullname" placeholder="Your full name" formControlName="full_name" required>
                 </p>
 
                 <p>
                     <label for="email">Email</label>
-                    <input type="email" id="email" placeholder="valid email id" formControlName="email" required>
+                    <input type="email" id="email" placeholder="Valid email" formControlName="email" required>
                 </p>
 
                 <p>
                     <label for="password">New Password</label>
-                    <input type="password" id="password" placeholder="at least 8 characters" formControlName="password" required>
+                    <input type="password" id="password" placeholder="At least 8 characters" formControlName="password" required>
                 </p>
 
                 <p>
@@ -28,36 +28,36 @@
 
                 <p>
                     <label for="phone">Phone Number</label>
-                    <input type="tel" id="phone" placeholder="add dial code" formControlName="phone" required>
+                    <input type="text" id="phone" placeholder="Add dial code" formControlName="phone" required>
                 </p>
 
                 <p>
                     <label for="address">Address</label>
-                    <input type="text" id="address" placeholder="full address" formControlName="address" required>
+                    <input type="text" id="address" placeholder="Full address" formControlName="address" required>
                 </p>
 
                 <p>
                     <label for="zipcode">Zipcode</label>
-                    <input type="text" id="zipcode" placeholder="zipcode" formControlName="zipcode" required>
+                    <input type="text" id="zipcode" placeholder="Zipcode" formControlName="zipcode" required>
                 </p>
 
                 <p class="selectionclass">
 
-                    <label for="selection">Volunteer</label>
-                    <input type="radio" name="selection" id="selection" value="" formControlName="who">
+                    <label for="v">Volunteer</label>
+                    <input type="radio" name="who" id="v" value="Volunteer" formControlName="who">
 
-                    <label for="selection">Owner</label>
-                    <input type="radio" name="selection" id="selection" value="" formControlName="who">
+                    <label for="o">Owner</label>
+                    <input type="radio" name="who" id="o" value="Owner" formControlName="who">
 
                 </p>
 
                 <p>
-                    <input type="submit" id="button" value="Create Account">
+                    <button type="submit" class="btn btn-primary" style="padding: 5px">Create Account</button>
                 </p>
             </form>
-        </main>
+        </div>
         <footer class="signupfooter">
-            <p>Already have an Account? <a href="#">Login</a></p>
+            <p>Already have an Account? <a href="/login">Login</a></p>
         </footer>
     </div>
     <div class="circle c1"></div>

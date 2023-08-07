@@ -19,10 +19,9 @@ export class CommonService {
   }
 
   getLocationWithCode(zipcode: string) {
-    const headers = new HttpHeaders()
-    .set('zip', zipcode);
+    const headers = new HttpHeaders().set('zip', zipcode);
 
-    return this.http.get(this.api_url + '/public/specifc', {'headers': headers}).toPromise();
+    return this.http.get('https://api.fooddonor.org/public/specific', {'headers': headers}).toPromise();
   }
 
   getVolunteerLocs(zipcode: string) {
